@@ -1,0 +1,68 @@
+.hide {
+    display: none;
+}
+
+/*
+background image is stretched. fix it or change it
+body {
+    background-image: url('red_room.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    height: 500px;
+} */
+
+
+
+h1 {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #644647;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #47ff52, -1px -1px 0 #47ff52, 1px -1px 0 #47ff52, -1px 1px 0 #47ff52, 0px 1px 0 #47ff52, 1px 0px 0 #47ff52, 0px -1px 0 #47ff52, -1px 0px 0 #47ff52, 4px 2px 0 #333;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(73, 73, 73);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .question-container {
+      margin-bottom: 1rem;
+      border-bottom: 3px solid lightgray;
+      border-top: 3px solid lightgray;
+      border-color: lightgray;
+      padding-bottom: 1rem;
+    }
+    
+    .nextBtn {
+        color: white;
+        background: rgb(71, 69, 69);
+        size: 20px;
+    }
+    
+    /* body {
+        text-align: left; */
+        /* background-size: cover;
+        background-repeat: no-repeat;
+        background: 100%;
+        background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fad52213-16de-419f-a480-2ae317bca438/dlgbys-ce35bbf8-2523-49b7-be94-56ee213e452e.png/v1/fill/w_1000,h_800,q_70,strp/red_room_wallpaper_by_damndirtyape_dlgbys-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMDI0IiwicGF0aCI6IlwvZlwvZmFkNTIyMTMtMTZkZS00MTlmLWE0ODAtMmFlMzE3YmNhNDM4XC9kbGdieXMtY2UzNWJiZjgtMjUyMy00OWI3LWJlOTQtNTZlZTIxM2U0NTJlLnBuZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ZMzNdXLY-qWaf8khRiRpT_jtGVtg-AW8uvmVyHtMinA"); */
+        
+        /* .wrongAnswerBtn {
+            color:black;
+            background: white;
+            opacity: 0.6;
+        }
+        
+        .rightAnswerBtn {
+            color:black;
+            background: white;
+        } */
+    }

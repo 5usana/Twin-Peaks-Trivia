@@ -11,20 +11,44 @@ body {
     height: 500px;
 } */
 
-.question-container {
-    /* display: block; */
+
+.board{
+    border-bottom: 5px solid rgb(146, 15, 15);
+    border-top: 5px solid rgb(146, 15, 15);
     position: relative;
     margin: 40px auto;
     height: auto;
     width: 500px;
     padding: 20px;
 }
-.question-container input {
+
+/* custom radio buttons
+.wrongAnswer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+}
+.rightAnswer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+} */
+
+
+/* .question-container input {
     list-style: none;
     margin: 0;
     padding: 0;
 	overflow: auto;
-  }
+  } */
 .nextBtn {
     position: absolute;
     right: 20%;
@@ -36,7 +60,7 @@ body {
 
 h1 {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     color: #644647;
     letter-spacing: 1px;
@@ -47,43 +71,13 @@ h1 {
 
 h2 {
     color: rgb(73, 73, 73);
+    margin-top: 0em;
+
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .question-container {
-      margin-bottom: 1rem;
-      border-bottom: 3px solid lightgray;
-      border-top: 3px solid lightgray;
-      border-color: lightgray;
-      padding-bottom: 1rem;
-    }
+.nextBtn {
+    color: white;
+    background: rgb(71, 69, 69);
+    size: 20px;
+}
     
-    .nextBtn {
-        color: white;
-        background: rgb(71, 69, 69);
-        size: 20px;
-    }
-    
-    /* body {
-        text-align: left; */
-        /* background-size: cover;
-        background-repeat: no-repeat;
-        background: 100%;
-        background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fad52213-16de-419f-a480-2ae317bca438/dlgbys-ce35bbf8-2523-49b7-be94-56ee213e452e.png/v1/fill/w_1000,h_800,q_70,strp/red_room_wallpaper_by_damndirtyape_dlgbys-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMDI0IiwicGF0aCI6IlwvZlwvZmFkNTIyMTMtMTZkZS00MTlmLWE0ODAtMmFlMzE3YmNhNDM4XC9kbGdieXMtY2UzNWJiZjgtMjUyMy00OWI3LWJlOTQtNTZlZTIxM2U0NTJlLnBuZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ZMzNdXLY-qWaf8khRiRpT_jtGVtg-AW8uvmVyHtMinA"); */
-        
-        /* .wrongAnswerBtn {
-            color:black;
-            background: white;
-            opacity: 0.6;
-        }
-        
-        .rightAnswerBtn {
-            color:black;
-            background: white;
-        } */
-    }

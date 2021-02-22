@@ -18,6 +18,14 @@ nextBtn.addEventListener("click", (event) => {
 
 
 // this only works for the 1st question, either create a new const for every answer or find an easier solution?
+//addeventlistner applies to the first round of quetions
+
+//do i use map() to bring together all my right & wrong answers
+
+//is the checked feature in rado inputs helpful to this solution?
+
+
+
 const rightAnswerRadio = document.getElementsByClassName("rightAnswer")[0];
 rightAnswerRadio.addEventListener("click", correctAnswer);
 // console.log(rightAnswerRadio)

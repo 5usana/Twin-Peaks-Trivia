@@ -1,136 +1,180 @@
-// //pumping the breaks on JS, attempting hard coding
-// //instead so that it makes more sence and i'm not
-// //depeding on an online tutorial
+const question = document.querySelector(".triviaQuestion")
+// console.log(question)
+const answersA = document.querySelector(".answerOptionsA")
+// console.log(answersA)
+const answersB = document.querySelector(".answerOptionsB")
+const answersC = document.querySelector(".answerOptionsC")
+let currentAnswer = " "
 
-
-// const triviaElementQuestions = document.getElementById('trivia')
-// // console.log(triviaElementQuestion)
-// const submitButton = document.getElementById('submit')
-// // console.log(submitButton)
-// const triviaResults = document.getElementById('results')
-// // console.log(triviaResults)
-
-
-// function buildTrivia(){}
-// //variable to store HTML output
-// const output = [];
-
-// function showResults(){}
-
-// buildTrivia();
-
-// submitButton.addEventListener('click', showResults);
-// // console.log(submitButton)
-
-
-
-
-// const triviaQuestions = [
-//     {
-//         question: "What is The Log made of?",
-//         answers: {
-//             a: "Douglas fir",
-//             b: "Redwood",
-//             c: "Ponderosa Pine"
-//         },
-//         correctAnswer: "c"
-//     },
-//     {
-//         question: "Who killed Laura Palmer?",
-//         answer: {
-//             a: "Leo Johnson",
-//             b: "Bob",
-//             c: "Bobby"
-//         },
-//         correctAnswer: "b"
-//     },
-//     {
-//         question: "Don’t drink the coffee, a ____ was found in the percolator!",
-//         answer: {
-//             a: "Fish",
-//             b: "Cockroach",
-//             c: "Fingernail"
-//         },
-//         correctAnswer: "a"
-//     },
-//     {
-//         question: "What is the name of the casino girls have gone missing from?",
-//         answer: {
-//             a: "Smokey Poker",
-//             b: "One-Eyed Jack's",
-//             c: "Dealer's Yard"
-//         },
-//         correctAnswer: "b"
-//     },
-//     {
-//         question:  "What famous diretor almost directed the second season in place of David Lynch?",
-//         answer: {
-//             a: "Stanley Kubrick",
-//             b: "Steve Spielberg",
-//             c: "Wes Anderson"
-//         },
-//         correctAnswer: "b"
-//     },
-//     {
-//         question: "Entertainment Weekly included this show in its “25 Greatest Cult TV Shows Ever” in 2009 listed at number__?",
-//         answer: {
-//             a: 5,
-//             b: 1,
-//             c: 20
-//         },
-//         correctAnswer: "a"
-//     },
-//     {
-//         question: "Which character was a homage to the 1993 film The Fugitive?",
-//         answer: {
-//             a: "The Giant",
-//             b: "Leo Johnson",
-//             c: "The One armed man"
-//         },
-//         correctAnswer: "c"
-//     },
-//     {
-//         question: "Which character was spontaneously cast from the crew?",
-//         answer: {
-//             a: "Jean Renault",
-//             b: "Agent Rosenfield",
-//             c: "Bob"
-//         },
-//         correctAnswer: "c"
-//     },
-//     {
-//         question: "What David Lynch film featured the same floor from the Red Room?",
-//         answer: {
-//             a: "Eraserhead",
-//             b: "Lost Highway",
-//             c: "Mulholland Drive"
-//         },
-//         correctAnswer: "a"
-//     },
-//     {
-//         question: "The conspiracies surrounding what famous actress’s death influenced the show?",
-//         answer: {
-//             a: "Natalie Wood,",
-//             b: "Brittany Murphy",
-//             c: "Marilyn Monroe"
-//         },
-//         correctAnswer: "a"
-//     }
-// ];
+const triviaQuestions = [{
+        question: "What is The Log made of?",
+        answers: {
+            a: "Douglas fir",
+            b: "Redwood",
+            c: "Ponderosa Pine"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Who killed Laura Palmer?",
+        answers: {
+            a: "Leo Johnson",
+            b: "Bob",
+            c: "Bobby"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Don’t drink the coffee, a ____ was found in the percolator!",
+        answers: {
+            a: "Fish",
+            b: "Cockroach",
+            c: "Fingernail"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "What is the name of the casino girls have gone missing from?",
+        answers: {
+            a: "Smokey Poker",
+            b: "One-Eyed Jack's",
+            c: "Dealer's Yard"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "What famous diretor almost directed the second season in place of David Lynch?",
+        answers: {
+            a: "Stanley Kubrick",
+            b: "Steven Spielberg",
+            c: "Wes Anderson"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Entertainment Weekly included this show in its “25 Greatest Cult TV Shows Ever” in 2009 listed at number__?",
+        answers: {
+            a: 5,
+            b: 1,
+            c: 20
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "Which character was a homage to the 1993 film The Fugitive?",
+        answers: {
+            a: "The Giant",
+            b: "Leo Johnson",
+            c: "The One armed man"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Which character was spontaneously cast from the crew?",
+        answers: {
+            a: "Jean Renault",
+            b: "Agent Rosenfield",
+            c: "Bob"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "What David Lynch film featured the same floor from the Red Room?",
+        answers: {
+            a: "Eraserhead",
+            b: "Lost Highway",
+            c: "Mulholland Drive"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "The conspiracies surrounding what famous actress’s death influenced the show?",
+        answers: {
+            a: "Natalie Wood,",
+            b: "Brittany Murphy",
+            c: "Marilyn Monroe"
+        },
+        correctAnswer: "c"
+    }
+];
+// console.log(triviaQuestions[0].question)
 // console.log(triviaQuestions)
+// console.log(triviaQuestions[0].answers)
 
-// //for each question
-// triviaQuestions.forEach((currentQuestion, questionNumber) => {
-    
-//     //variable needed to store answers
-//     const answers =[];
+let currentQuestionIndex = 0;
+question.innerText = triviaQuestions[currentQuestionIndex].question
+//replicate line 101 w/answers, loop over 
+answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
+answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
+answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
 
-//     for(letter in currentQuestion.answers){
 
-//         //button to call html
-//         answers.push
-//     }
-// })
+
+const nextBtn = document.querySelector(".nextBtn");
+
+nextBtn.addEventListener("click", (event) => {
+    event.preventDefault;
+    //   increment question index
+    currentQuestionIndex++;
+    question.innerText = triviaQuestions[currentQuestionIndex].question
+    answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
+    answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
+    answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
+});
+
+answersA.addEventListener("click", (event) => {
+    event.preventDefault;
+    currentAnswer = "a"
+
+    if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
+        pleaseWork()
+    }
+});
+
+answersB.addEventListener("click", (event) => {
+    event.preventDefault;
+    currentAnswer = "b"
+
+    //    console.log(currentAnswer)
+
+    if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
+        pleaseWork()
+    }
+});
+
+answersC.addEventListener("click", (event) => {
+    event.preventDefault;
+    currentAnswer = "c"
+
+
+    if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
+        pleaseWork()
+    }
+
+
+});
+
+console.log(triviaQuestions[currentQuestionIndex].correctAnswer)
+
+
+
+
+
+function pleaseWork() {
+    currentQuestionIndex++
+    question.innerText = triviaQuestions[currentQuestionIndex].question
+
+    answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
+    answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
+    answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
+}
+
+
+
+
+
+
+
 
 // /*
 // //create div for trivia questions & answers

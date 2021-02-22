@@ -11,7 +11,28 @@ body {
     height: 500px;
 } */
 
-
+.question-container {
+    /* display: block; */
+    position: relative;
+    margin: 40px auto;
+    height: auto;
+    width: 500px;
+    padding: 20px;
+}
+.question-container input {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	overflow: auto;
+  }
+.nextBtn {
+    position: absolute;
+    right: 20%;
+    margin: 40px auto;
+    height: auto;
+    width: 100px;
+    padding: 7px;
+}
 
 h1 {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;

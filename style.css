@@ -2,6 +2,80 @@
     display: none;
 }
 
+.board{
+    border-bottom: 5px solid rgb(146, 15, 15);
+    border-top: 5px solid rgb(146, 15, 15);
+    position: relative;
+    margin: 20px auto;
+    height: auto;
+    width: 550px;
+    padding: 20px;
+}
+
+.answerOptionsA {
+    margin: 20px auto;
+    margin-right: 1em;
+    width: 141px;
+    padding: 7px;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+    
+}
+
+.answerOptionsB {
+    margin: 20px auto;
+    margin-right: 1em;
+    width: 141px;
+    padding: 7px;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+}
+
+.answerOptionsC {
+    margin: 20px auto;
+    width: 141px;
+    padding: 7px;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+}
+
+.nextBtn {
+    position: absolute;
+    right: 20%;
+    margin: 40px auto;
+    height: auto;
+    width: 100px;
+    padding: 7px;
+}
+
+h1 {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #644647;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #47ff52, -1px -1px 0 #47ff52, 1px -1px 0 #47ff52, -1px 1px 0 #47ff52, 0px 1px 0 #47ff52, 1px 0px 0 #47ff52, 0px -1px 0 #47ff52, -1px 0px 0 #47ff52, 4px 2px 0 #333;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(73, 73, 73);
+    margin-top: 0em;
+    
+}
+
+.nextBtn {
+    color: white;
+    background: rgb(145, 136, 136);
+    size: 20px;
+    width: 141px;
+    border-radius: 8px;
+}
+
 /*
 background image is stretched. fix it or change it
 body {
@@ -11,18 +85,8 @@ body {
     height: 500px;
 } */
 
-
-.board{
-    border-bottom: 5px solid rgb(146, 15, 15);
-    border-top: 5px solid rgb(146, 15, 15);
-    position: relative;
-    margin: 40px auto;
-    height: auto;
-    width: 500px;
-    padding: 20px;
-}
-
-/* custom radio buttons
+/*=====original direction of project
+custom radio buttons
 .wrongAnswer {
     position: absolute;
     top: 0;
@@ -47,37 +111,5 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-	overflow: auto;
+    overflow: auto;
   } */
-.nextBtn {
-    position: absolute;
-    right: 20%;
-    margin: 40px auto;
-    height: auto;
-    width: 100px;
-    padding: 7px;
-}
-
-h1 {
-    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-    color: #644647;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 #47ff52, -1px -1px 0 #47ff52, 1px -1px 0 #47ff52, -1px 1px 0 #47ff52, 0px 1px 0 #47ff52, 1px 0px 0 #47ff52, 0px -1px 0 #47ff52, -1px 0px 0 #47ff52, 4px 2px 0 #333;
-    text-align: center;
-}
-
-h2 {
-    color: rgb(73, 73, 73);
-    margin-top: 0em;
-
-}
-
-.nextBtn {
-    color: white;
-    background: rgb(71, 69, 69);
-    size: 20px;
-}
-    

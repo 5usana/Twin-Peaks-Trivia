@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <title>Twin Peaks Trivia</title>
 </head>
+
 <body>
     <h1>Twin Peaks Trivia</h1>
+    <div id="score"></div>
     <div class="board">
         <h2 class="triviaQuestion"></h2>
-            <div class="triviaResults">
-                <button class="answerOptionsA"></button>
-                <button class="answerOptionsB"></button>
-                <button class="answerOptionsC"></button>
-            </div>
+
+        <div class="triviaResults">
+            <button class="answerOptionsA"></button>
+            <button class="answerOptionsB"></button>
+            <button class="answerOptionsC"></button>
+        </div>
     </div>
 
- 
+    <button class="nextBtn">Next Question</button>
+    <div id="trivia"></div>
+    <div id="results"></div>
+    <script src="app.js"></script>
+</body>
 
-<!-- <form class="question-container">
+</html>
+
+
+<!-- //===original direction of project
+    <form class="question-container">
     <h2>Who killed Laura Palmer?</h2>
     <input type="radio" class="wrongAnswer" name="selection" value="wrongAnswer" checked>
     <label for="wrongAnswer">Leo Johnson</label><br>
@@ -112,39 +124,3 @@
 </form> -->
 
 <!-- <input class="answer" type="text"> -->
-<button class="nextBtn">Next Question</button>
-
-
-<div id="trivia"></div>
-<div id="results"></div>
-<script src="app.js"></script>
-</body>
-</html>
-
-
-<!-- added for="wrong-right"anser labe to labels. is this necessary? -->
-<!-- //backup in case i need to switch back to ul/li
-<div class="question-container">
-    <h2>Who killed Laura Palmer?</h2>
-        <ul>
-            <li class="wrongAnswer">Leo Johnson</li>
-            <li class="rightAnswer">Bob</li>
-            <li class="wrongAnswer">Bobby</li>
-        </ul>
-</div>
-<div class="question-container hide">
-    <h2>What wood is The Log made of?</h2>
-        <ul>
-            <li class="wrongAnswer">Douglas fir</li>
-            <li class="wrongAnswer">Redwood</li>
-            <li class="rightAnswer">Ponderosa Pine</li>
-        </ul>
-</div>
-<div class="question-container hide">
-    <h2>Don’t drink the coffee, a ____ was found in the percolator!</h2>
-        <ul>
-            <li class="rightAnswer">Fish</li>
-            <li class="wrongAnswer">Cockroach</li>
-            <li class="wrongAnswer">Fingernail</li>
-        </ul>
-</div> -->

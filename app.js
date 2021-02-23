@@ -101,17 +101,14 @@ const triviaQuestions = [{
 // console.log(triviaQuestions)
 // console.log(triviaQuestions[0].answers)
 
+let score = 0;
 let currentQuestionIndex = 0;
 question.innerText = triviaQuestions[currentQuestionIndex].question
-//replicate line 101 w/answers, loop over 
 answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
 answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
 answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
 
-
-
 const nextBtn = document.querySelector(".nextBtn");
-
 nextBtn.addEventListener("click", (event) => {
     event.preventDefault;
     //   increment question index
@@ -127,47 +124,46 @@ answersA.addEventListener("click", (event) => {
     currentAnswer = "a"
 
     if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
-        pleaseWork()
+       score += 10; 
+       document.getElementById("score").innerText= "Score : " + score;
+        // pleaseWork()
     }
 });
 
 answersB.addEventListener("click", (event) => {
     event.preventDefault;
     currentAnswer = "b"
-
-    //    console.log(currentAnswer)
-
     if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
-        pleaseWork()
+        score += 10;
+        document.getElementById("score").innerText= "Score : " + score;
+        // pleaseWork()
     }
 });
 
 answersC.addEventListener("click", (event) => {
     event.preventDefault;
     currentAnswer = "c"
-
-
     if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
-        pleaseWork()
+        score += 10;
+        document.getElementById("score").innerText= "Score : " + score; 
+                    //fix score count, 10pts added w/ea click, needs to
+                    //only add once per question
+        // pleaseWork()
     }
-
-
+    
 });
 
-console.log(triviaQuestions[currentQuestionIndex].correctAnswer)
-
-
-
-
-
-function pleaseWork() {
-    currentQuestionIndex++
-    question.innerText = triviaQuestions[currentQuestionIndex].question
-
-    answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
-    answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
-    answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
-}
+// function pleaseWork() {
+//     // currentQuestionIndex++
+//     question.innerText = triviaQuestions[currentQuestionIndex].question
+//     answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
+//     answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
+//     answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
+    
+    
+    
+// }
+// console.log(triviaQuestions[currentQuestionIndex].correctAnswer)
 
 
 

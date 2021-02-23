@@ -1,45 +1,70 @@
+body {
+    background-image: url('chevron.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    height: 500px;
+}
 .hide {
     display: none;
 }
 
 .board{
-    border-bottom: 5px solid rgb(146, 15, 15);
-    border-top: 5px solid rgb(146, 15, 15);
+    background-color: white;
+    opacity: 85%;
+    border-radius: 15px;
+    /* border-bottom: 5px solid rgb(146, 15, 15);
+    border-top: 5px solid rgb(146, 15, 15); */
     position: relative;
     margin: 20px auto;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     height: auto;
-    width: 550px;
+    width: 500px;
     padding: 20px;
+}
+#score {
+    background-color: #47ff52;
+
+}
+#wrong {
+    background: rgb(139, 8, 8);
+
 }
 
 .answerOptionsA {
-    margin: 20px auto;
-    margin-right: 1em;
+    margin: 0 .5em 0 .5em;
+    /* margin: 20px auto;
+    margin-right: 1em; */
     width: 141px;
     padding: 7px;
     border-radius: 8px;
     color: white;
     background-color: black;
+    opacity: 98%;
     
 }
 
 .answerOptionsB {
-    margin: 20px auto;
-    margin-right: 1em;
+    margin: 0 .5em 0 .5em;
+    /* margin: 20px auto;
+    margin-right: 1em; */
     width: 141px;
     padding: 7px;
     border-radius: 8px;
     color: white;
     background-color: black;
+    opacity: 98%;
 }
 
 .answerOptionsC {
-    margin: 20px auto;
-    width: 141px;
+    margin: 0 .5em 0 .5em;
+    /* margin: 20px auto;
+    width: 141px; */
     padding: 7px;
     border-radius: 8px;
     color: white;
     background-color: black;
+    opacity: 98%;
 }
 
 .nextBtn {
@@ -47,13 +72,17 @@
     right: 20%;
     margin: 40px auto;
     height: auto;
-    width: 100px;
+    width: 140px;
     padding: 7px;
+    color: white;
+    background: rgb(139, 8, 8);
+    border-radius: 8px;
 }
+
 
 h1 {
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     color: #644647;
     letter-spacing: 1px;
@@ -63,27 +92,15 @@ h1 {
 }
 
 h2 {
-    color: rgb(73, 73, 73);
+    color: rgb(20, 19, 19);
     margin-top: 0em;
+    font-size: 30px;
     
 }
 
-.nextBtn {
-    color: white;
-    background: rgb(145, 136, 136);
-    size: 20px;
-    width: 141px;
-    border-radius: 8px;
-}
 
-/*
-background image is stretched. fix it or change it
-body {
-    background-image: url('red_room.jpg');
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    height: 500px;
-} */
+
+
 
 /*=====original direction of project
 custom radio buttons

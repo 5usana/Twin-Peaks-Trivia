@@ -1,10 +1,9 @@
 const question = document.querySelector(".triviaQuestion")
-// console.log(question)
 const answersA = document.querySelector(".answerOptionsA")
-// console.log(answersA)
 const answersB = document.querySelector(".answerOptionsB")
 const answersC = document.querySelector(".answerOptionsC")
 let currentAnswer = " "
+let answerSelected= false
 
 const triviaQuestions = [{
         question: "What is The Log made of?",
@@ -52,11 +51,11 @@ const triviaQuestions = [{
         correctAnswer: "b"
     },
     {
-        question: "Entertainment Weekly included this show in its “25 Greatest Cult TV Shows Ever” in 2009 listed at number__?",
+        question: "The ____ are not what they seem.",
         answers: {
-            a: 5,
-            b: 1,
-            c: 20
+            a: "owls",
+            b: "weapons",
+            c: "blank"
         },
         correctAnswer: "a"
     },
@@ -101,58 +100,116 @@ const triviaQuestions = [{
 // console.log(triviaQuestions)
 // console.log(triviaQuestions[0].answers)
 
-let score = 0;
-let currentQuestionIndex = 0;
+let score = 0; //game starts with a score of 0
+let currentQuestionIndex = 0; //trivia is sorted in an array
+//generates questions & answers from array onto site 1 at a time
 question.innerText = triviaQuestions[currentQuestionIndex].question
 answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
 answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
 answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
 
 const nextBtn = document.querySelector(".nextBtn");
+
 nextBtn.addEventListener("click", (event) => {
     event.preventDefault;
-    //   increment question index
+    answerSelected = false //once nxtBtn is selected the answerSelected     returns to false
     currentQuestionIndex++;
+
+    //if last question is on screen hide nextBtn
+    if(currentQuestionIndex === 9){
+        nextBtn.style.display = 'none'
+    }  
+    //THEN once answer is selected removed current question
+    // and display GAME OVER
+    //generate new button to start over?
+   
+
+    document.getElementById("wrong").innerText= "";
+    //   increment question index & load next question w/its set of answers
     question.innerText = triviaQuestions[currentQuestionIndex].question
     answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
     answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
     answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
+
 });
+
+
+//SCORE DISPLAY
+if(score === 100){
+    return scoreCount + "points, now that's a damn fine perfect score!"//TP-understand.jpg
+} else if ( score >= 60){
+    return scoreCount + "points, now that's a damn fine effort"//massive-quantities.jpg
+} else if (score >= 40){
+    return scoreCount + "points, maybe it's time for a rewatch!"//thumbs-up.jpeg
+} else {
+    return scoreCount + "points, time to start Twin Peaks!" //low-score.jpg
+}
+
+// console.log(triviaQuestions[9])
+
+
+
+
+// nextBtn.addEventListener("click", (event) => {
+//     event.preventDefault;
+//     //   add hide to current question
+//     triviaQuestions[currentQuestionIndex].classList.add("hide");
+//     //   increment question index
+//     currentQuestionIndex++;
+//     //   remove 'hide' from class of current question so that it is displayed
+//     triviaQuestions[currentQuestionIndex].classList.remove("hide");
+//     //
+//   });
 
 answersA.addEventListener("click", (event) => {
     event.preventDefault;
-    currentAnswer = "a"
-
-    if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
-       score += 10; 
-       document.getElementById("score").innerText= "Score : " + score;
-        // pleaseWork()
+    if(answerSelected){ //return the info below if this answer is selected
+        return
     }
+    currentAnswer = "a"
+    if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
+        score += 10; 
+        //if correct answer is selected ad 10pts to score & announce score
+        document.getElementById("score").innerText= "Score : " + score;       
+    } else{
+        // if wrong answer selected generate wrong answer response
+        document.getElementById("wrong").innerText= "Wrong Answer";
+    }
+    answerSelected = true
 });
 
 answersB.addEventListener("click", (event) => {
     event.preventDefault;
+    if(answerSelected){
+        return
+    }
     currentAnswer = "b"
     if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
         score += 10;
-        document.getElementById("score").innerText= "Score : " + score;
-        // pleaseWork()
+        document.getElementById("score").innerText= "Score : " + score;    
+    } else{
+        document.getElementById("wrong").innerText= "Wrong Answer";
     }
+    answerSelected = true
 });
 
 answersC.addEventListener("click", (event) => {
     event.preventDefault;
+    if(answerSelected){
+        return
+    }
     currentAnswer = "c"
     if (currentAnswer === triviaQuestions[currentQuestionIndex].correctAnswer) {
         score += 10;
-        document.getElementById("score").innerText= "Score : " + score; 
-                    //fix score count, 10pts added w/ea click, needs to
-                    //only add once per question
-        // pleaseWork()
+        document.getElementById("score").innerText= "Score : " + score;   
+    } else{ 
+        document.getElementById("wrong").innerText= "Wrong Answer";
     }
-    
+    answerSelected = true
 });
 
+
+//Twin Peaks font source https://halloweenlove.com/twin-peaks-font-style-download/
 // function pleaseWork() {
 //     // currentQuestionIndex++
 //     question.innerText = triviaQuestions[currentQuestionIndex].question

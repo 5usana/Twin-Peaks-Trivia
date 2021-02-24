@@ -2,99 +2,101 @@ const question = document.querySelector(".triviaQuestion")
 const answersA = document.querySelector(".answerOptionsA")
 const answersB = document.querySelector(".answerOptionsB")
 const answersC = document.querySelector(".answerOptionsC")
+const triviaContainer = document.querySelector(".triviaResults")
+
 let currentAnswer = " "
 let answerSelected= false
 
 const triviaQuestions = [{
-        question: "What is The Log made of?",
-        answers: {
-            a: "Douglas fir",
-            b: "Redwood",
-            c: "Ponderosa Pine"
-        },
-        correctAnswer: "c"
+    question: "What is The Log made of?",
+    answers: {
+        a: "Douglas fir",
+        b: "Redwood",
+        c: "Ponderosa Pine"
     },
-    {
-        question: "Who killed Laura Palmer?",
-        answers: {
-            a: "Leo Johnson",
-            b: "Bob",
-            c: "Bobby"
-        },
-        correctAnswer: "b"
+    correctAnswer: "c"
+},
+{
+    question: "Who killed Laura Palmer?",
+    answers: {
+        a: "Leo Johnson",
+        b: "Bob",
+        c: "Bobby"
     },
-    {
-        question: "Don’t drink the coffee, a ____ was found in the percolator!",
-        answers: {
-            a: "Fish",
-            b: "Cockroach",
-            c: "Fingernail"
-        },
-        correctAnswer: "a"
+    correctAnswer: "b"
+},
+{
+    question: "Don’t drink the coffee, a ____ was found in the percolator!",
+    answers: {
+        a: "Fish",
+        b: "Cockroach",
+        c: "Fingernail"
     },
-    {
-        question: "What is the name of the casino girls have gone missing from?",
-        answers: {
-            a: "Smokey Poker",
-            b: "One-Eyed Jack's",
-            c: "Dealer's Yard"
-        },
-        correctAnswer: "b"
+    correctAnswer: "a"
+},
+{
+    question: "What is the name of the casino girls have gone missing from?",
+    answers: {
+        a: "Smokey Poker",
+        b: "One-Eyed Jack's",
+        c: "Dealer's Yard"
     },
-    {
-        question: "What famous diretor almost directed the second season in place of David Lynch?",
-        answers: {
-            a: "Stanley Kubrick",
-            b: "Steven Spielberg",
-            c: "Wes Anderson"
-        },
-        correctAnswer: "b"
+    correctAnswer: "b"
+},
+{
+    question: "What famous diretor almost directed the second season in place of David Lynch?",
+    answers: {
+        a: "Stanley Kubrick",
+        b: "Steven Spielberg",
+        c: "Wes Anderson"
     },
-    {
-        question: "The ____ are not what they seem.",
-        answers: {
-            a: "owls",
-            b: "weapons",
-            c: "blank"
-        },
-        correctAnswer: "a"
+    correctAnswer: "b"
+},
+{
+    question: "The ____ are not what they seem.",
+    answers: {
+        a: "owls",
+        b: "donuts",
+        c: "murders"
     },
-    {
-        question: "Which character was a homage to the 1993 film The Fugitive?",
-        answers: {
-            a: "The Giant",
-            b: "Leo Johnson",
-            c: "The One armed man"
-        },
-        correctAnswer: "c"
+    correctAnswer: "a"
+},
+{
+    question: "Which character was a homage to the 1993 film The Fugitive?",
+    answers: {
+        a: "The Giant",
+        b: "Leo Johnson",
+        c: "The One armed man"
     },
-    {
-        question: "Which character was spontaneously cast from the crew?",
-        answers: {
-            a: "Jean Renault",
-            b: "Agent Rosenfield",
-            c: "Bob"
-        },
-        correctAnswer: "c"
+    correctAnswer: "c"
+},
+{
+    question: "Which character was spontaneously cast from the crew?",
+    answers: {
+        a: "Jean Renault",
+        b: "Agent Rosenfield",
+        c: "Bob"
     },
-    {
-        question: "What David Lynch film featured the same floor from the Red Room?",
-        answers: {
-            a: "Eraserhead",
-            b: "Lost Highway",
-            c: "Mulholland Drive"
-        },
-        correctAnswer: "a"
+    correctAnswer: "c"
+},
+{
+    question: "What David Lynch film featured the same floor from the Red Room?",
+    answers: {
+        a: "Eraserhead",
+        b: "Lost Highway",
+        c: "Mulholland Drive"
     },
-    {
-        question: "The conspiracies surrounding what famous actress’s death influenced the show?",
-        answers: {
-            a: "Natalie Wood,",
-            b: "Brittany Murphy",
-            c: "Marilyn Monroe"
-        },
-        correctAnswer: "c"
-    }
+    correctAnswer: "a"
+},
+{
+    question: "The conspiracies surrounding what famous actress’s death influenced the show?",
+    answers: {
+        a: "Natalie Wood,",
+        b: "Brittany Murphy",
+        c: "Marilyn Monroe"
+    },
+    correctAnswer: "c"
+}
 ];
 // console.log(triviaQuestions[0].question)
 // console.log(triviaQuestions)
@@ -102,7 +104,7 @@ const triviaQuestions = [{
 
 let score = 0; //game starts with a score of 0
 let currentQuestionIndex = 0; //trivia is sorted in an array
-//generates questions & answers from array onto site 1 at a time
+//generates questions & answers from array onto site one at a time
 question.innerText = triviaQuestions[currentQuestionIndex].question
 answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
 answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
@@ -112,54 +114,20 @@ const nextBtn = document.querySelector(".nextBtn");
 
 nextBtn.addEventListener("click", (event) => {
     event.preventDefault;
-    answerSelected = false //once nxtBtn is selected the answerSelected     returns to false
+    answerSelected = false //once nxtBtn is selected the answerSelected   returns to false (answerSeleced becomes true when answers a-c are chosen)
     currentQuestionIndex++;
-
     //if last question is on screen hide nextBtn
     if(currentQuestionIndex === 9){
         nextBtn.style.display = 'none'
     }  
-    //THEN once answer is selected removed current question
-    // and display GAME OVER
-    //generate new button to start over?
-   
-
     document.getElementById("wrong").innerText= "";
     //   increment question index & load next question w/its set of answers
     question.innerText = triviaQuestions[currentQuestionIndex].question
     answersA.innerText = triviaQuestions[currentQuestionIndex].answers.a
     answersB.innerText = triviaQuestions[currentQuestionIndex].answers.b
     answersC.innerText = triviaQuestions[currentQuestionIndex].answers.c
-
+    
 });
-
-
-//SCORE DISPLAY
-if(score === 100){
-    return scoreCount + "points, now that's a damn fine perfect score!"//TP-understand.jpg
-} else if ( score >= 60){
-    return scoreCount + "points, now that's a damn fine effort"//massive-quantities.jpg
-} else if (score >= 40){
-    return scoreCount + "points, maybe it's time for a rewatch!"//thumbs-up.jpeg
-} else {
-    return scoreCount + "points, time to start Twin Peaks!" //low-score.jpg
-}
-
-// console.log(triviaQuestions[9])
-
-
-
-
-// nextBtn.addEventListener("click", (event) => {
-//     event.preventDefault;
-//     //   add hide to current question
-//     triviaQuestions[currentQuestionIndex].classList.add("hide");
-//     //   increment question index
-//     currentQuestionIndex++;
-//     //   remove 'hide' from class of current question so that it is displayed
-//     triviaQuestions[currentQuestionIndex].classList.remove("hide");
-//     //
-//   });
 
 answersA.addEventListener("click", (event) => {
     event.preventDefault;
@@ -208,6 +176,35 @@ answersC.addEventListener("click", (event) => {
     answerSelected = true
 });
 
+triviaContainer.addEventListener("click", (event) => {
+    event.preventDefault;
+    //once answer is selected on last question
+    if(currentQuestionIndex === 9){
+        triviaContainer.style.display = 'none'// remove current question & answers from triviaContainer
+        gameOver () // and display GAME OVER & score
+    }    
+});
+
+console.log(score)
+
+
+//SCORE DISPLAY
+function gameOver () {
+    if(score === 100){ //do i need to add innerText for this to work?
+        document.querySelector(".board").innerText= score + " points: Now that's a damn fine perfect score!";
+        //TP-understand.jpg
+    } else if (score >= 60){
+        document.querySelector(".board").innerText= score + " points: Now that's a damn fine effort!";//massive-quantities.jpg
+    } else if (score >= 40){
+        document.querySelector(".board").innerText= score  + " points: Maybe it's time for a rewatch!";//thumbs-up.jpeg
+    } else {
+        document.querySelector(".board").innerText= score  + " points: Time to start Twin Peaks!"; //low-score.jpg
+    }
+}
+
+
+
+//generate new button to start over?
 
 //Twin Peaks font source https://halloweenlove.com/twin-peaks-font-style-download/
 // function pleaseWork() {

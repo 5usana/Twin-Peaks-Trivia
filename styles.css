@@ -1,16 +1,44 @@
+/*
+Experimenting with FLEX
+
+
+body { 
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; background-size: cover; 
+    background-image: url('chevron.jpg'); 
+  }
+@media (max-width: 480px) {
+    body {
+     background:url('chevron.jpg');
+    }
+} */
+
+/* .hide {
+    display: none;
+} */
+
+
 body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     background-image: url('chevron.jpg');
     background-color: black;
     background-repeat: no-repeat, repeat;
     background-size: cover;
     height: 500px;
 } 
-
-.hide {
-    display: none;
+.triviaResults {
+    order: 5;
 }
 
 .board {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
     background-color: white;
     opacity: 90%;
     border-radius: 15px;
@@ -27,7 +55,10 @@ body {
 }
 
 #score {
-    right: 0px;
+    flex-grow: 2;
+    align-self: flex-end;
+    order: 5;
+    /* right: 0px; */
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     background-color: #198b21;
     opacity: 90%;
@@ -41,6 +72,9 @@ body {
 }
 
 #wrong {
+    flex-grow: 2;
+    align-self: flex-start;
+    order: 5;
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     opacity: 85%;
     background: rgb(139, 8, 8);
@@ -82,6 +116,9 @@ body {
 }
 
 .nextBtn {
+    align-self: flex-end;
+    justify-content: flex-end;
+    order: 5;
     position: absolute;
     right: 20%;
     margin: 40px auto;
@@ -95,6 +132,9 @@ body {
 
 
 h1 {
+    order: 0;
+    flex-grow: 5;
+    align-self: flex-start center;
     font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-size: 70px;
     font-weight: bold;

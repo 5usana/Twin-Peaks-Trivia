@@ -196,26 +196,6 @@ function gameOver() {
 }
 
 // /*
-// //create div for trivia questions & answers
-
-// //multiple choice 'click'
-
-// //eventlistener for click
-
-// //button for submitting answer
-
-// //determine if theanswer selected resulted in a correct answer
-
-// //syntax for trivia questions, use object literals to display questions in
-// // an array
-
 // source used  for triviaQuestions array https://www.sitepoint.com/simple-javascript-quiz/
-
-// //use a data property like data-id='0' ect
-// // to figure out which box was clicked
-
-
-// //use an if/else to check ea winning combo
-// //starting point, but something cleaner can be 
-// //done??
+// source for Twin Peaks h1 font https://halloweenlove.com/twin-peaks-font-style-download/
 // */
